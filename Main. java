@@ -1,0 +1,32 @@
+public class Main {
+    public static void main(String[] args) {
+        HeroManager manager = new HeroManager();
+
+        manager.addHero(new Hero("Spider-Man", 85, Affiliation.AVENGERS));
+        manager.addHero(new Hero("Batman", 88, Affiliation.JUSTICE_LEAGUE));
+        manager.addHero(new Hero("Wolverine", 90, Affiliation.X_MEN));
+        manager.addHero(new Hero("Mr. Fantastic", 75, Affiliation.FANTASTIC_FOUR));
+
+        System.out.println("Original List:");
+        manager.displayHeroes();
+
+        System.out.println("\nSorted by Bubble Sort:");
+        manager.bubbleSortByPower();
+        manager.displayHeroes();
+
+        System.out.println("\nSorted by Insertion Sort:");
+        manager.insertionSortByPower();
+        manager.displayHeroes();
+
+        System.out.println("\nAfter Removing Batman:");
+        manager.removeHero("Batman");
+        manager.displayHeroes();
+
+        System.out.println("\nAfter Adding Wonder Woman:");
+        manager.addHero(new Hero("Wonder Woman", 95, Affiliation.JUSTICE_LEAGUE));
+        manager.displayHeroes();
+
+        System.out.println("\n2D Array Display:");
+        manager.displayHeroesAs2DArray();
+    }
+}
